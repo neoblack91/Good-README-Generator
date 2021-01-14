@@ -16,36 +16,37 @@ inquirer
     message: "What is your Github user name?",
   },
   {
-    type: "list",
-    name: "username",
-    message: "What is your user name?",
-    choices: ["A", "B", "C"],
+    type: "input",
+    name: "description",
+    message: "Write a description of your project.",
+    
   },
-  // {
-  //   type: 'input',
-  //   message: 'What is your user name?',
-  //   name: 'username',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'What is your user name?',
-  //   name: 'username',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'What is your user name?',
-  //   name: 'username',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'What is your user name?',
-  //   name: 'username',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'What is your user name?',
-  //   name: 'username',
-  // },
+  {
+    type: 'input',
+    name: 'install',
+    message: 'What is the installation instructions?',
+  },
+  {
+    type: 'input',
+    name: 'usage',
+    message: 'What are you using this for?',
+  },
+  {
+    type: 'input',
+    message: 'How are you contributing to this project?',
+    name: 'contributing',
+  },
+  {
+    type: 'input',
+    message: 'Can you provide any test written?',
+    name: 'test',
+  },
+  {
+    type: 'list',
+    message: 'Choose a license',
+    name: 'License',
+    choices: ["","","","",]
+  },
   // {
   //   type: 'input',
   //   message: 'What is your user name?',
