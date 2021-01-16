@@ -1,4 +1,4 @@
-'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
@@ -55,22 +55,40 @@ function init() {
     type: 'list',
     message: 'Choose a license',
     name: 'License',
-    choices: ["Open Source Initiative (OSI)","GNU General Public License, version 3 (GPLv3)","Apache License 2.0","MIT",]
+    choices: ["IBM","GNU GPL v3","Apache License 2.0","MIT",]
 
   },
     
 
   ]).then((answers) => {
-          const filename = `${answers.Title}.md`;
+          const filename = `Readme.md`;
           return asyncWrite(filename, generateREADME(answers) )}
 
       ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)});
    }
   const generateREADME = (responses) =>
+  
+  {let badge 
+    switch (responses.License) {
+    
+    case "MIT": {
+       badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    } 
+    case "IBM": {
+      badge = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0).';
+    }
+    case "Apache License 2.0": {
+      badge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    }
+    case "GNU GPL v3": {
+      badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)';
+    }
+    }
 
-`# ${responses.name}
+  return `# ${responses.title} ${badge}
 
-# ${responses.title} 
+# ${responses.name}
+
 
 ## Description
 
@@ -118,25 +136,6 @@ ${responses.testInstructions}
 
 * [${responses.github}](https://github.com/${responses.github})
 `
-   init();
+  }
+  init();
    
-  //  switch (choices) {
-    
-  //   case MIT: {
-  //     para.append.Title = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
-  //   } 
-  //   case MIT: {
-  //     para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
-    
-  //   }
-  //   }
-
- // TODO: Create a function to initialize app
-
-
-// Function call to initialize app
-
-
-// create the someFunctionToGenerateMarkdown which should generate the right readme structure
-// pass into this function the response
-
