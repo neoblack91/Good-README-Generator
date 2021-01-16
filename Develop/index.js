@@ -6,10 +6,15 @@ const asyncWrite = util.promisify(fs.writeFile)
 // TODO: Create an array of questions for user input
 
 const generateREADME = (answers) =>
-`<h1 class="display-4">Hi! My name is ${answers.name}</h1>`
+`# ${answers.name}</h1>`
 
 inquirer
 .prompt([
+  {
+    type: 'input',
+    message: 'What is the title of this project?',
+    name: 'Title',
+  },
   {
     type: "input",
     name: "github",
@@ -45,18 +50,15 @@ inquirer
     type: 'list',
     message: 'Choose a license',
     name: 'License',
-    choices: ["","","","",]
+    choices: ["Open Source Initiative (OSI)","GNU General Public License, version 3 (GPLv3)","Apache License 2.0","MIT",]
   },
-  // {
-  //   type: 'input',
-  //   message: 'What is your user name?',
-  //   name: 'username',
-  // },
-  // {
-  //     type: 'input',
-  //     name: 'username',
-  //     message: 'What is your user name?',
-  //   },
+ 
+  {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address name?',
+  },
+
   ]).then((answers) => {
           const filename = `${answers.github}.md`;
           return asyncWrite(filename, generateREADME(answers))}
