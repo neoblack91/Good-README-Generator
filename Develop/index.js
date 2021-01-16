@@ -1,3 +1,4 @@
+'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
@@ -55,20 +56,21 @@ function init() {
     message: 'Choose a license',
     name: 'License',
     choices: ["Open Source Initiative (OSI)","GNU General Public License, version 3 (GPLv3)","Apache License 2.0","MIT",]
+
   },
+    
 
   ]).then((answers) => {
           const filename = `${answers.Title}.md`;
           return asyncWrite(filename, generateREADME(answers) )}
 
       ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)});
-      
-  }
+   }
   const generateREADME = (responses) =>
 
 `# ${responses.name}
 
-# ${responses.title}
+# ${responses.title} 
 
 ## Description
 
@@ -81,7 +83,7 @@ ${responses.description}
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#test)
-* [Questions](#questions)
+* [Contact Info](#qContactInfo)
 
 ### Installation
 
@@ -117,21 +119,19 @@ ${responses.testInstructions}
 * [${responses.github}](https://github.com/${responses.github})
 `
    init();
-
-      // err ? console.log(err) : console.log("Success!")
-// TODO: Create a function to write README file
-// function writeFile(fileName, data) {
-//   fs.writeFile(fileName, data);
-//   const filename = `${generateREADME.github}.md`;
-//   return asyncWrite(fileName,data(questions))
-  
+   
+  //  switch (choices) {
     
-// // add something to filename to make it read the path of the current folder
-// }inquirer.prompt(questions).then((response) => {
-//   console.log(response);
-//   writeFile("README.md", GenMarkdown(questions))
-// })
-// TODO: Create a function to initialize app
+  //   case MIT: {
+  //     para.append.Title = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+  //   } 
+  //   case MIT: {
+  //     para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
+    
+  //   }
+  //   }
+
+ // TODO: Create a function to initialize app
 
 
 // Function call to initialize app
