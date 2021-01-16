@@ -17,30 +17,30 @@ ${answers.description}
 
 ```
 
-${inquiryResponses.installation}
+${answers.installation}
 
 ```
 
 ### Usage
 
-${inquiryResponses.usageInfo}
+${answers.usageInfo}
 
 ### License
 
- This project is licensed under an ${inquiryResponses.License} license.
+ This project is licensed under an ${answers.License} license.
 
 ## Contributing
 
-${inquiryResponses.contributingGuidelines}
+${answers.contributingGuidelines}
 
 ## Tests
 
 To run test, run the following commands:
 
 ```
-${inquiryResponses.testInstructions}
+${answers.testInstructions}
 ```
 ## Questions
 
-* If you have any questions regarding this repository, contact me either by email at [Email](${inquiryResponses.email}), or you can find more of my work within my github account attached below. Here, you can open an issue if needed.
-* [${inquiryResponses.github}](https://github.com/${inquiryResponses.github})
+* If you have any questions regarding this repository, contact me either by email at [Email](${answers.email}), or you can find more of my work within my github account attached below. Here, you can open an issue if needed.
+* [${answers.github}](https://github.com/${answers.github})
