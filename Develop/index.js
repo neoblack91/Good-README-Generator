@@ -85,9 +85,9 @@ function init() {
     }
     }
 
-  return `# ${responses.title} ${badge}
+  return `# ${responses.Title} ${badge}
 
-# ${responses.name}
+# ${responses.github}
 
 
 ## Description
@@ -107,13 +107,13 @@ ${responses.description}
 
 \`\`\`
 
-${responses.installation}
+${responses.install}
 
 \`\`\`
 
 ### Usage
 
-${responses.usageInfo}
+${responses.usage}
 
 ### License
 
@@ -121,7 +121,7 @@ ${responses.usageInfo}
 
 ## Contributing
 
-${responses.contributingGuidelines}
+${responses.contributing}
 
 ## Tests
 
