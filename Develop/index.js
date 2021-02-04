@@ -22,7 +22,7 @@ function init() {
   {
     type: 'input',
     name: 'email',
-    message: 'What is your email address name?',
+    message: 'What is your email address?',
   },
   
   {
@@ -43,7 +43,7 @@ function init() {
   },
   {
     type: 'input',
-    message: 'How are you contributing to this project?',
+    message: 'What language are you contributing to this project?',
     name: 'contributing',
   },
   {
@@ -58,8 +58,7 @@ function init() {
     choices: ["IBM","GNU GPL v3","Apache License 2.0","MIT",]
 
   },
-    
-
+   
   ]).then((answers) => {
           const filename = `Readme.md`;
           return asyncWrite(filename, generateREADME(answers) )}
