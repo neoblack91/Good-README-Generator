@@ -20,7 +20,7 @@ This is an assignment to help people generate readme documents better.
 
 ```
 
-First youopen up the read me generator, then in the terminal you type "node.index.js", then you answer the questions that are given to you.
+First you open up the read me generator, then in the terminal you type "node.index.js", then you answer the questions that are given to you.
 
 ```
 
